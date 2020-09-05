@@ -33,7 +33,7 @@ MongoClient.connect(connectionString, {
 
         // HTML Route
         app.get('/', (req, res) => {
-            db.collection('username')
+            db.collection('username').find().toArray()
             res.render('index.html', {})
         });
 
@@ -41,34 +41,39 @@ MongoClient.connect(connectionString, {
             usersCollection.insertOne(req.body)
                 .then(result => {
                     console.log(result)
-                    res.render('index.html', {})
+                    res.redirect('/')
+                    // res.render('index.html', {})
                 })
                 .catch(error => console.error(error))
         })
+
+        app.put('/username', (req, res) => {
+            usersCollection.findOneAndUpdate()
+        });
+
+
+        app.use(bodyParser.urlencoded({
+            extended: true
+        }));
+
+        // Connect form questions to MongoDB
+        app.get("/", function (req, res) {
+            res.sendFile(__dirname + "/public/index.html");
+        });
+
+        app.post('/Question01', function (res, req) {
+            // 
+        });
+        app.post('/Question02', function (res, req) {
+            // 
+        });
+        app.post('/Question03', function (res, req) {
+            // 
+        });
+        app.post('/Question04', function (res, req) {
+            // 
+        });
+        app.post('/Question05', function (res, req) {
+            // 
+        });
     });
-
-
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-// Connect form questions to MongoDB
-app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
-app.post('/Question01', function (res, req) {
-    // 
-});
-app.post('/Question02', function (res, req) {
-    // 
-});
-app.post('/Question03', function (res, req) {
-    // 
-});
-app.post('/Question04', function (res, req) {
-    // 
-});
-app.post('/Question05', function (res, req) {
-    // 
-});
