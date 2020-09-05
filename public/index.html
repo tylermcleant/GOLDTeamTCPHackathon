@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <title>Space Place!</title>
@@ -12,7 +13,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html"><img src="https://via.placeholder.com/350x150" alt="brand image"></a>
+            <a class="navbar-brand" href="index.html"><img src="/Images/logo-3.png" alt="brand image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,13 +27,27 @@
     </header>
     <main role="main">
         <article>
-            <div class="jumbotron">
-                <div class="container">
-                <h1 class="display-3">Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">What is a Public Space? »</a></p>
+            <div class="jumbotron jumbotron-fluid bg-dark">
+  
+                <div class="jumbotron-background">
+                  <img src="https://unsplash.com/photos/E1gYI6P9hjY" class="blur ">
                 </div>
-            </div>
+              
+                <div class="container text-white">
+              
+                  <h1 class="display-4">Welcome to Space Place!</h1>
+                  <p class="lead">Please choose one of the options below to view our featured content or learn about public spaces.</p>
+                  
+                  <a class="btn btn-primary btn-lg" href="#" role="button">What is Public Space?</a>
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Explore Public Spaces</a>
+                  <a git href="https://www.pps.org/places"></href>
+                   <a class="btn btn-primary btn-lg" href="#" role="button">Feedback</a> 
+              
+                </div>
+                <!-- /.container -->
+                
+               
+              </div>
         </article>
         <article>
 
@@ -45,53 +60,52 @@
             <input type="submit" value="Submit">
         </form>
         <form action= "/Question01" method="POST">
-            <p>Question 1</p>
+            <p>What is your knowledge level of public spaces?</p>
             <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
+            <label for="male">Expert</label><br>
             <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
+            <label for="female">Intermediate</label><br>
             <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <label for="other">Novice or Beginner</label><br><br>
             <input type="submit" value="Submit">
         </form>
         <form action= "/Question02" method="POST">
-            <p>Question 2</p>
+            <p>What is a public space?</p>
             <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
+            <label for="male">An area or place that is open and accessible to all peoples, regardless of gender, race, ethnicity, age or 
+                socio-economic level.</label><br>
             <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
+            <label for="female">Any space that is outside my house.</label><br>
             <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <label for="other">Somewhere people gather.</label><br><br>
             <input type="submit" value="Submit">
         </form>
         <form action= "/Question03" method="POST">
-            <p>Question 3</p>
+            <p>How are people with disabilities help shaping urban designs?</p>
             <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
+            <label for="male">They are not included in urban design decisions.</label><br>
             <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
+            <label for="female">They help bring up issues of inclusion, how fear and safety define their experience and who belongs in particular spaces outside of technical understanding.</label><br>
             <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <label for="other">They create design and present them.</label><br><br>
             <input type="submit" value="Submit">
         </form>
         <form action= "/Question04" method="POST">
-            <p>Question 4</p>
+            <p>Can urban designs create public spaces safe?</p>
             <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
+            <label for="male">Yes</label><br>
             <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <label for="female">No</label><br>
             <input type="submit" value="Submit">
         </form>
         <form action= "/Question05" method="POST">
-            <p>Question 5</p>
+            <p>How has "I Am Me" made disabled and vulnerable people feel safe?</p>
             <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
+            <label for="male">Providing an escort to go to each public space</label><br>
             <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
+            <label for="female">Building partnerships with owners of public spaces to identify as a I Am Me partner and provide services.</label><br>
             <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <label for="other">Nothing</label><br><br>
             <input type="submit" value="Submit">
         </form>
     </section>
