@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 const app = express();
 
 // Establish connection to MongoDB
-const connectionString = 'mongodb+srv://space-place-admin:y8opHFb6aR7f@space-place.eqtit.azure.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const connectionString = 'mongodb+srv://space-place-admin:y8opHFb6aR7f@space-place.eqtit.azure.mongodb.net/space-place?retryWrites=true&w=majority';
 
 MongoClient.connect(connectionString, {
         useUnifiedTopology: true
@@ -14,15 +14,14 @@ MongoClient.connect(connectionString, {
     function (err, client) {
         if (err) {
             return console.error(err);
-            // const db = client.db('test');
         } else {
             console.log('Application now connected to MongoDB');
-            const db = client.db('users')
-            const collection = db.collection('user');
+            const db = client.db('space-place')
+            const usersCollection = db.collection('users');
 
 
             // app.use( /* ... */ )
-            // app.post( /* ... */ )
+            // app.post();
             // app.listen( /* ... */ )
         }
     });
