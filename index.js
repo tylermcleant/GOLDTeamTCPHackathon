@@ -23,6 +23,9 @@ MongoClient.connect(connectionString, {
             extended: true
         }))
         app.use(bodyParser.json())
+        app.use(bodyParser.urlencoded({
+            extended: true
+        }));
         app.use(express.static('public'))
 
         const port = 3000;
@@ -33,42 +36,45 @@ MongoClient.connect(connectionString, {
 
         // HTML Route
         app.get('/', (req, res) => {
-            db.collection('username')
-            res.render('index.html', {})
+            db.collection('username').find().toArray()
+            // res.render('index.html', {})
+            res.sendFile(__dirname + "/public/index.html")
         });
 
         app.post('/username', (req, res) => {
             usersCollection.insertOne(req.body)
                 .then(result => {
                     console.log(result)
-                    res.render('index.html', {})
+                    res.redirect('/')
                 })
                 .catch(error => console.error(error))
         })
+
+        app.put('/username', (req, res) => {
+            usersCollection.findOneAndUpdate()
+        });
+
+
+
+
+        // Connect form questions to MongoDB
+        // app.get("/", function (req, res) {
+        //     ;
+        // });
+
+        app.post('/Question01', function (res, req) {
+            // 
+        });
+        app.post('/Question02', function (res, req) {
+            // 
+        });
+        app.post('/Question03', function (res, req) {
+            // 
+        });
+        app.post('/Question04', function (res, req) {
+            // 
+        });
+        app.post('/Question05', function (res, req) {
+            // 
+        });
     });
-
-
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-// Connect form questions to MongoDB
-app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
-app.post('/Question01', function (res, req) {
-    // 
-});
-app.post('/Question02', function (res, req) {
-    // 
-});
-app.post('/Question03', function (res, req) {
-    // 
-});
-app.post('/Question04', function (res, req) {
-    // 
-});
-app.post('/Question05', function (res, req) {
-    // 
-});
