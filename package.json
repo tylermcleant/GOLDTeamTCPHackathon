@@ -1,0 +1,22 @@
+{
+  "name": "space-place",
+  "version": "1.0.0",
+  "description": "Fullstack webapp to educate users on \"public spaces\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylermcleant/GOLDTeamTCPHackathon.git"
+  },
+  "author": "Nia Van Sturgill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylermcleant/GOLDTeamTCPHackathon/issues"
+  },
+  "homepage": "https://github.com/tylermcleant/GOLDTeamTCPHackathon#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
