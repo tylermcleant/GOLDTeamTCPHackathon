@@ -14,8 +14,14 @@
 
 How are people with disabilities help shaping urban designs?
 - they are not included in urban design decisions
+<<<<<<< HEAD
+- they help bring up issues of inclusion, how fear and safety define their experiene and who belongs in    
+  particular spaces outside of technical understanding
+- they create design and present them. 
+=======
 - they help bring up issues of inclusion, how fear and safety define their experience and who belongs in particular spaces outside of technical understanding
 - 
+>>>>>>> 700c4e68ee79ba0c4039c4913c26d31d76720af4
 
 Can urban designs create public spaces safe?
 - Yes
