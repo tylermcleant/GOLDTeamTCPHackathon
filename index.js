@@ -23,6 +23,9 @@ MongoClient.connect(connectionString, {
             extended: true
         }))
         app.use(bodyParser.json())
+        app.use(bodyParser.urlencoded({
+            extended: true
+        }));
         app.use(express.static('public'))
 
         const port = 3000;
@@ -34,7 +37,8 @@ MongoClient.connect(connectionString, {
         // HTML Route
         app.get('/', (req, res) => {
             db.collection('username').find().toArray()
-            res.render('index.html', {})
+            // res.render('index.html', {})
+            res.sendFile(__dirname + "/public/index.html")
         });
 
         app.post('/username', (req, res) => {
@@ -42,7 +46,6 @@ MongoClient.connect(connectionString, {
                 .then(result => {
                     console.log(result)
                     res.redirect('/')
-                    // res.render('index.html', {})
                 })
                 .catch(error => console.error(error))
         })
@@ -52,14 +55,12 @@ MongoClient.connect(connectionString, {
         });
 
 
-        app.use(bodyParser.urlencoded({
-            extended: true
-        }));
+
 
         // Connect form questions to MongoDB
-        app.get("/", function (req, res) {
-            res.sendFile(__dirname + "/public/index.html");
-        });
+        // app.get("/", function (req, res) {
+        //     ;
+        // });
 
         app.post('/Question01', function (res, req) {
             // 
