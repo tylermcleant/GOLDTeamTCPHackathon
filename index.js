@@ -5,12 +5,24 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 
-// const connectionString = ;
+// Establish connection to MongoDB
+const connectionString = 'mongodb+srv://space-place-admin:JRLqwSCcItCKaFMe@cluster0.eqtit.azure.mongodb.net/test?retryWrites=true&w=majority';
+
+MongoClient.connect(connectionString, {
+        useUnifiedTopology: true
+    },
+    function (err, client) {
+        if (err) {
+            return console.error(err);
+        } else {
+            console.log('Application now connected to MongoDB');
+        }
+    });
 
 const port = 3000;
 app.listen(port, function () {
-    console.log(`Server now listening on ${port}`);
-    console.log(`Site viewable at http://localhost:${port}/`);
+    console.log(`Server started and listening on ${port}`);
+    console.log(`Current build is viewable at http://localhost:${port}/`);
 });
 
 app.use(bodyParser.urlencoded({
