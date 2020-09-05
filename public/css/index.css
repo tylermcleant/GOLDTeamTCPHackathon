@@ -2,6 +2,10 @@
 font-family: 'Crimson Text', serif;
 font-family: 'Work Sans', sans-serif;
 */
+
+body{
+    background-color: #fff;
+}
 .navbar-brand {
     transform: translateX(-50%);
     left: 50%;
@@ -9,6 +13,17 @@ font-family: 'Work Sans', sans-serif;
 }
 
 .navbar{
+    background-color: #006080;
     padding-top: 30px;
     padding-bottom: 60px;
+}
+
+h1{
+    background-color: #000;
+    font-family: 'Crimson Text', serif;
+    text-decoration-color: #fff;
+}
+
+p{
+    font-family: 'Work Sans', sans-serif;
 }
